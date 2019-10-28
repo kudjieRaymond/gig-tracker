@@ -31,18 +31,8 @@
 							
 							
 							<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('home')}}" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
-							<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-tune-vertical"></i><span class="hide-menu">Categories </span></a>
-								<ul aria-expanded="false" class="collapse  first-level">
-									<li class="sidebar-item"><a href="" class="sidebar-link"><i class="mdi mdi-view-quilt"></i><span class="hide-menu"> </span></a></li>
-									
-								</ul>
-							</li>
-							<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-content-copy"></i><span class="hide-menu">Activities Management </span></a>
-									<ul aria-expanded="false" class="collapse  first-level">
-									<li class="sidebar-item"><a href="" class="sidebar-link"><i class="mdi mdi-format-align-left"></i><span class="hide-menu"> Events </span></a></li>
-								
-									</ul>
-							</li>
+							<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('clients.index')}}" aria-expanded="false"><i class="mdi mdi-account-circle"></i><span class="hide-menu">Clients</span></a></li>
+							
 						
 							<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">User Management </span></a>
 								<ul aria-expanded="false" class="collapse  first-level">
