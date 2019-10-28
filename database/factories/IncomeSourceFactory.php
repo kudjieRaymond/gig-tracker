@@ -1,7 +1,7 @@
 <?php
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-use App\Client;
+use App\IncomeSource;
 use Faker\Generator as Faker;
 
 /*
@@ -15,17 +15,10 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(Client::class, function (Faker $faker) {
+$factory->define(IncomeSource::class, function (Faker $faker) {
     return [
-				'first_name' => $faker->word,
-				'last_name'=> $faker->word,
-        'email' => $faker->unique()->safeEmail,
-				'phone' => $faker->phoneNumber,
-				'website'=> $faker->url,
-				'skype' =>$faker->word,
-				'company'=>$faker->company ,
-				'status' =>$faker->randomElement($array = ['active', 'inactive']),
-				'country'=>$faker->country,
+				'name' => $faker->word,
+				'fee_percent'=> $faker->randomDigitNotNull,
 				'created_by'=>  factory(App\User::class),
         
     ];
