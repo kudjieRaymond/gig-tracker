@@ -38,7 +38,7 @@
 								<li class="sidebar-item"><a href="{{route('income-sources.index')}}" class="sidebar-link"><i class="mdi mdi-view-quilt"></i><span class="hide-menu">Income Sources </span></a></li>
 								<li class="sidebar-item"><a href="{{route('currencies.index')}}" class="sidebar-link"><i class="mdi mdi-view-quilt"></i><span class="hide-menu">Currencies </span></a></li>
 								<li class="sidebar-item"><a href="{{route('transaction-types.index')}}" class="sidebar-link"><i class="mdi mdi-view-quilt"></i><span class="hide-menu">Transaction Types </span></a></li>	
-										
+								<li class="sidebar-item"><a href="{{route('project-statuses.index')}}" class="sidebar-link"><i class="mdi mdi-view-quilt"></i><span class="hide-menu">Project Statuses </span></a></li>		
 								</ul>
 							</li>
 							<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">User Management </span></a>

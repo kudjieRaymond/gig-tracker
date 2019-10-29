@@ -98,7 +98,6 @@ class TransactionTypeController extends Controller
 			
 		  session()->flash('success', 'Transaction Type Deleted Successfully');
 
-
-        return back();
+      return back();
     }
 }
