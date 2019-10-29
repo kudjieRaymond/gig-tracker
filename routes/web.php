@@ -23,5 +23,6 @@ Route::group(['middleware'=>['auth']], function(){
 
 	Route::resource('clients', 'ClientController');
 	Route::resource('income-sources', 'IncomeSourceController');
+	Route::resource('currencies', 'CurrencyController');
 
 });

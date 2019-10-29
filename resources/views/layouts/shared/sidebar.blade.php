@@ -36,7 +36,8 @@
 							<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-settings-box"></i><span class="hide-menu">Settings</span></a>
 								<ul aria-expanded="false" class="collapse  first-level">
 								<li class="sidebar-item"><a href="{{route('income-sources.index')}}" class="sidebar-link"><i class="mdi mdi-view-quilt"></i><span class="hide-menu">Income Sources </span></a></li>
-									
+								<li class="sidebar-item"><a href="{{route('currencies.index')}}" class="sidebar-link"><i class="mdi mdi-view-quilt"></i><span class="hide-menu">Currencies </span></a></li>
+										
 										
 								</ul>
 							</li>

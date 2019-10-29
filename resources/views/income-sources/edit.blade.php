@@ -33,7 +33,7 @@
 									@method('PUT')
 									<div class="form-group">
 										<label>Title <span>*</span></label>	
-										<input type="text" value="{{ old('name', isset($incomeSource) ? $incomeSource->name : '') }}" class="form-control form-control-lg @error('first_name') is-invalid @enderror" name="name" required title="Enter Income Source Name">
+										<input type="text" value="{{ old('name', isset($incomeSource) ? $incomeSource->name : '') }}" class="form-control form-control-lg @error('name') is-invalid @enderror" name="name" required title="Enter Income Source Name">
 											@error('name')
 											<span class="invalid-feedback" role="alert">
 													<strong>{{ $message }}</strong>
