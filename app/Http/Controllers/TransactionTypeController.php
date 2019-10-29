@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\TransactionType;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreTransactionTypeRequest;
+use App\Http\Requests\UpdateTransactionTypeRequest;
 
 class TransactionTypeController extends Controller
 {
@@ -14,7 +16,9 @@ class TransactionTypeController extends Controller
      */
     public function index()
     {
-        //
+      $transactionTypes = TransactionType::all();
+			
+			return view('transaction-types.index', compact('transactionTypes'));
     }
 
     /**
@@ -24,18 +28,23 @@ class TransactionTypeController extends Controller
      */
     public function create()
     {
-        //
+    	return view('transaction-types.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  App\Http\Requests\StoreTransactionTypeRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreTransactionTypeRequest $request)
     {
-        //
+			 $transactionType = TransactionType::create($request->all());
+			 
+			 	session()->flash('success', 'Transaction Type Created Successfully');
+
+
+        return redirect()->route('transaction-types.index');
     }
 
     /**
@@ -57,19 +66,24 @@ class TransactionTypeController extends Controller
      */
     public function edit(TransactionType $transactionType)
     {
-        //
+      return view('transaction-types.edit', compact('transactionType'));
+
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param App\Http\Requests\UpdateTransactionTypeRequest  $request
      * @param  \App\TransactionType  $transactionType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TransactionType $transactionType)
+    public function update(UpdateTransactionTypeRequest $request, TransactionType $transactionType)
     {
-        //
+			$transactionType->update($request->all());
+			
+			session()->flash('success', 'Transaction Type Updated Successfully');
+
+      return redirect()->route('transaction-types.index');
     }
 
     /**
@@ -80,6 +94,11 @@ class TransactionTypeController extends Controller
      */
     public function destroy(TransactionType $transactionType)
     {
-        //
+			$transactionType->delete();
+			
+		  session()->flash('success', 'Transaction Type Deleted Successfully');
+
+
+        return back();
     }
 }

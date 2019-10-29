@@ -14,8 +14,12 @@ class CreateTransactionTypesTable extends Migration
     public function up()
     {
         Schema::create('transaction_types', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+						$table->bigIncrements('id');
+						$table->string('name')->nullable();
+						$table->unsignedBigInteger('created_by')->nullable();
+						$table->timestamps();
+						$table->softDeletes();
+
         });
     }
 

@@ -37,7 +37,7 @@
 								<ul aria-expanded="false" class="collapse  first-level">
 								<li class="sidebar-item"><a href="{{route('income-sources.index')}}" class="sidebar-link"><i class="mdi mdi-view-quilt"></i><span class="hide-menu">Income Sources </span></a></li>
 								<li class="sidebar-item"><a href="{{route('currencies.index')}}" class="sidebar-link"><i class="mdi mdi-view-quilt"></i><span class="hide-menu">Currencies </span></a></li>
-										
+								<li class="sidebar-item"><a href="{{route('transaction-types.index')}}" class="sidebar-link"><i class="mdi mdi-view-quilt"></i><span class="hide-menu">Transaction Types </span></a></li>	
 										
 								</ul>
 							</li>
