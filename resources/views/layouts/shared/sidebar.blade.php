@@ -32,6 +32,7 @@
 							
 							<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('home')}}" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
 							<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('clients.index')}}" aria-expanded="false"><i class="mdi mdi-account-circle"></i><span class="hide-menu">Clients</span></a></li>
+							<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('projects.index')}}" aria-expanded="false"><i class="mdi mdi-file-document-box"></i><span class="hide-menu">Projects</span></a></li>
 							
 							<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-settings-box"></i><span class="hide-menu">Settings</span></a>
 								<ul aria-expanded="false" class="collapse  first-level">

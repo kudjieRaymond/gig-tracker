@@ -24,7 +24,7 @@ class ProjectStatusControllerTest extends TestCase
 			$this->user = factory(User::class)->create();
 		}
 		 /** @test */
-    function guests_may_not_create_currency()
+    function guests_may_not_create_project_status()
     {
         $this->get(route('project-statuses.create'))
             ->assertRedirect('/login');

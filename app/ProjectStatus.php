@@ -16,5 +16,10 @@ class ProjectStatus extends Model
         'created_at',
         'updated_at',
         'deleted_at',
-    ];
+		];
+		
+	public function projects()
+	{
+			return $this->hasMany(Project::class, 'status_id', 'id');
+	}
 }
