@@ -28,5 +28,6 @@ Route::group(['middleware'=>['auth']], function(){
 	Route::resource('transaction-types', 'TransactionTypeController');
 	Route::resource('project-statuses', 'ProjectStatusController');
 	Route::resource('projects', 'ProjectController');
+	Route::resource('notes', 'NoteController');
 
 });
