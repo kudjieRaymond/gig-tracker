@@ -34,6 +34,11 @@ class Project extends Model
         return $this->belongsTo(ProjectStatus::class, 'status_id');
 		}
 		
+		public function documents()
+    {
+        return $this->hasMany(Document::class);
+		}
+		
 		public function getStartDateAttribute($value)
     {
         return $value ? Carbon::parse($value)->format('Y-m-d') : null;

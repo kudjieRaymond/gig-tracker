@@ -29,5 +29,6 @@ Route::group(['middleware'=>['auth']], function(){
 	Route::resource('project-statuses', 'ProjectStatusController');
 	Route::resource('projects', 'ProjectController');
 	Route::resource('notes', 'NoteController');
-
+	Route::resource('documents', 'DocumentController');
+	Route::post('documents/media', 'DocumentController@storeMedia')->name('documents.storeMedia');
 });
