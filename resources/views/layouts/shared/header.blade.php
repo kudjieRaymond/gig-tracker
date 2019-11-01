@@ -60,7 +60,7 @@
 							<!-- ============================================================== -->
 							<!-- Comment -->
 							<!-- ============================================================== -->
-							<li class="nav-item dropdown">
+							{{-- <li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-bell font-24"></i>
 											
 									</a>
@@ -78,37 +78,7 @@
 
 													<li>
 															<div class="message-center notifications">
-																	<!-- Message -->
-																	{{-- @foreach (auth()->user()->unreadNotifications as $notification) 
-															@if($notification->type == 'App\Notifications\FacebookLiveRequestSent') 			
-																<a href="{{route('facebook-lives.show', [$notification->data['live_id']])}}" class="message-item">
-																	<span class="btn btn-danger btn-circle"><i class="@if($notification->type == 'App\Notifications\FacebookLiveRequestSent') fa fa-link @endif "></i></span>
-																	<span class="mail-contnet">
-																			<h5 class="message-title">{{$notification->data['msg']}}</h5>
-																		</span>
-																	</a>
-																	@elseif($notification->type == 'App\Notifications\OrderCreated')
-																			<a href="{{route('orders.show', [$notification->data['order_id']])}}" class="message-item">
-																			<span class="btn btn-danger btn-circle"><i class="fa fa-link "></i></span>
-																			<span class="mail-contnet">
-																					<h5 class="message-title">{{$notification->data['msg']}}</h5>
-																			</span>	
-																	</a>
-																	@endif
-																	@endforeach --}}
-																	{{--<!-- Message -->
-																	<a href="javascript:void(0)" class="message-item">
-																			<span class="btn btn-success btn-circle"><i class="ti-calendar"></i></span>
-																			<span class="mail-contnet">
-																					<h5 class="message-title">Event today</h5> <span class="mail-desc">Just a reminder that you have event</span> <span class="time">9:10 AM</span> </span>
-																	</a>
-																	<!-- Message -->
-																	<a href="javascript:void(0)" class="message-item">
-																			<span class="btn btn-info btn-circle"><i class="ti-settings"></i></span>
-																			<span class="mail-contnet">
-																					<h5 class="message-title">Settings</h5> <span class="mail-desc">You can customize this template as you want</span> <span class="time">9:08 AM</span> </span>
-																	</a>
-																	--}}
+														
 															</div>
 													</li>
 													<li>
@@ -116,7 +86,7 @@
 													</li>
 											</ul>
 									</div>
-							</li>
+							</li> --}}
 							<!-- ============================================================== -->
 							
 							

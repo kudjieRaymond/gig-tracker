@@ -105,7 +105,7 @@ class ProjectControllerTest extends TestCase
 			'status_id' => $projectStatus->id,
 		];
 		
-		$response = $this->actingAs($this->user)->put(route('projects.update', $projectStatus->id), $payload);
+		$response = $this->actingAs($this->user)->put(route('projects.update', $project->id), $payload);
 
 		$response->assertStatus(302);
 

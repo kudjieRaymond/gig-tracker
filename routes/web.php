@@ -31,4 +31,6 @@ Route::group(['middleware'=>['auth']], function(){
 	Route::resource('notes', 'NoteController');
 	Route::resource('documents', 'DocumentController');
 	Route::post('documents/media', 'DocumentController@storeMedia')->name('documents.storeMedia');
+	Route::resource('transactions', 'TransactionController');
+
 });
