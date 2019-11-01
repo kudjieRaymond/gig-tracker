@@ -67,6 +67,7 @@ class TransactionController extends Controller
      */
     public function show(Transaction $transaction)
     {
+			 
       $transaction->load('project', 'transaction_type', 'income_source', 'currency');
 
       return view('transactions.show', compact('transaction'));
@@ -80,6 +81,7 @@ class TransactionController extends Controller
      */
     public function edit(Transaction $transaction)
     {
+
        $projects = Project::all()->pluck('name', 'id')->prepend('Please Select', '');
 
 			$transaction_types = TransactionType::all()->pluck('name', 'id')->prepend('Please Select', '');
@@ -102,6 +104,7 @@ class TransactionController extends Controller
      */
      public function update(UpdateTransactionRequest $request, Transaction $transaction)
     {
+		
 				$transaction->update($request->all());
 				
 				session()->flash('success', 'Transaction Updated Successfully');
@@ -118,6 +121,7 @@ class TransactionController extends Controller
      */
     public function destroy(Transaction $transaction)
     {
+
 			 $transaction->delete();
 			 
 				session()->flash('success', 'Transaction Deleted Successfully');

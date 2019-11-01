@@ -6,6 +6,8 @@ use App\ProjectStatus;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreProjectStatusRequest;
 use App\Http\Requests\UpdateProjectStatusRequest;
+use Gate;
+use Symfony\Component\HttpFoundation\Response;
 
 class ProjectStatusController extends Controller
 {
@@ -40,6 +42,7 @@ class ProjectStatusController extends Controller
      */
     public function store(StoreProjectStatusRequest $request)
     {
+			
       $projectStatus = ProjectStatus::create($request->all());
 			 
 			 	session()->flash('success', 'Project Status Created Successfully');
@@ -67,6 +70,7 @@ class ProjectStatusController extends Controller
      */
     public function edit(ProjectStatus $projectStatus)
     {
+
       return view('project-statuses.edit', compact('projectStatus'));
 
     }
@@ -80,6 +84,7 @@ class ProjectStatusController extends Controller
      */
     public function update(UpdateProjectStatusRequest $request, ProjectStatus $projectStatus)
     {
+
 			$projectStatus->update($request->all());
 			
 			session()->flash('success', 'Project Status Updated Successfully');
@@ -95,6 +100,7 @@ class ProjectStatusController extends Controller
      */
     public function destroy(ProjectStatus $projectStatus)
     {
+
       $projectStatus->delete();
 			
 		  session()->flash('success', 'Project Status Deleted Successfully');

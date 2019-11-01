@@ -17,11 +17,12 @@
 							</b> --}}
 							<!--End Logo icon -->
 							<!-- Logo text -->
-							<span class="logo-text">
+							<span class="logo-text text-white font-weight-bolder">
+									GIG-TRACKER
 									 <!-- dark Logo text -->
-									 <img src="{{asset('front-register/images/logo.png')}}" alt="homepage" class="dark-logo" width="180px" />
+									 {{-- <img src="{{asset('assets/images/logo-text.png')}}" alt="Gig" class="dark-logo" width="180px" />
 									 <!-- Light Logo text -->    
-									 <img src="{{asset('front-register/images/logo-light.png')}}" class="light-logo" alt="homepage" width="180px" />
+									 <img src="{{asset('front-register/images/logo-light.png')}}" class="light-logo" alt="homepage" width="180px" /> --}}
 							</span>
 					</a>
 					<!-- ============================================================== -->
@@ -104,7 +105,7 @@
 															<p class=" m-b-0"> {{auth()->user()->email}}</p>
 													</div>
 											</div>
-											<a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
+											{{-- <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a> --}}
 										
 											<div class="dropdown-divider"></div>
 											<a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>

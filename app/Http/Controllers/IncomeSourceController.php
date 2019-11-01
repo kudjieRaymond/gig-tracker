@@ -6,6 +6,8 @@ use App\IncomeSource;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreIncomeSourceRequest;
 use App\Http\Requests\UpdateIncomeSourceRequest;
+use Gate;
+use Symfony\Component\HttpFoundation\Response;
 
 class IncomeSourceController extends Controller
 {
@@ -55,6 +57,7 @@ class IncomeSourceController extends Controller
      */
     public function show(IncomeSource $incomeSource)
     {
+			 
       return view('income-sources.show', compact('incomeSource'));
 
     }
@@ -67,6 +70,7 @@ class IncomeSourceController extends Controller
      */
     public function edit(IncomeSource $incomeSource)
     {
+			 
       return view('income-sources.edit', compact('incomeSource'));
 
     }
@@ -80,6 +84,7 @@ class IncomeSourceController extends Controller
      */
     public function update(UpdateIncomeSourceRequest $request, IncomeSource $incomeSource)
     {
+			 
 			$incomeSource->update($request->all());
 			
 			session()->flash('success', 'Income Source Updated Successfully');
@@ -95,6 +100,7 @@ class IncomeSourceController extends Controller
      */
     public function destroy(IncomeSource $incomeSource)
     {
+
 			$incomeSource->delete();
 			
 			session()->flash('success', 'Income Source Deleted Successfully');

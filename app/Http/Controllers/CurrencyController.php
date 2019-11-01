@@ -6,7 +6,6 @@ use App\Currency;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreCurrencyRequest;
 use App\Http\Requests\UpdateCurrencyRequest;
-
 class CurrencyController extends Controller
 {
     /**
@@ -55,6 +54,7 @@ class CurrencyController extends Controller
      */
     public function show(Currency $currency)
     {
+				 
       return view('currencies.show', compact('currency'));
 
     }
@@ -67,6 +67,7 @@ class CurrencyController extends Controller
      */
     public function edit(Currency $currency)
     {
+
       return view('currencies.edit', compact('currency'));
     }
 
@@ -79,6 +80,7 @@ class CurrencyController extends Controller
      */
     public function update(UpdateCurrencyRequest $request, Currency $currency)
     {
+
       $currency->update($request->all());
 			 
 			session()->flash('success', 'Currency Updated Successfully');
@@ -94,6 +96,7 @@ class CurrencyController extends Controller
      */
     public function destroy(Currency $currency)
     {
+
       $currency->delete();
 			
 			session()->flash('success', 'Currency Deleted Successfully');

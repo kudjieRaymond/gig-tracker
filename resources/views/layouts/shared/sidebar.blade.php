@@ -15,7 +15,6 @@
 															<span class="op-5 user-email">{{auth()->user()->email}}</span>
 													</a>
 													<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Userdd">
-															<a class="dropdown-item" href="javascript:void(0)"><i class="ti-user mr-1 ml-1"></i> My Profile</a>
 															
 															<div class="dropdown-divider"></div>
 															<a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings mr-1 ml-1"></i> Account Setting</a>
@@ -36,7 +35,7 @@
 							<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('notes.index')}}" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Notes</span></a></li>
 							<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('documents.index')}}" aria-expanded="false"><i class="mdi mdi-file-cloud"></i><span class="hide-menu">Documents</span></a></li>
 							<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('transactions.index')}}" aria-expanded="false"><i class="mdi mdi-file-send"></i><span class="hide-menu">Transactions</span></a></li>
-							<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">Reports</span></a></li>
+						<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('reports.index')}}" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">Reports</span></a></li>
 							
 							
 							<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-settings-box"></i><span class="hide-menu">Settings</span></a>

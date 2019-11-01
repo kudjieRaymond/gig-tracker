@@ -66,6 +66,7 @@ class TransactionTypeController extends Controller
      */
     public function edit(TransactionType $transactionType)
     {
+			 
       return view('transaction-types.edit', compact('transactionType'));
 
     }
@@ -79,6 +80,7 @@ class TransactionTypeController extends Controller
      */
     public function update(UpdateTransactionTypeRequest $request, TransactionType $transactionType)
     {
+			 
 			$transactionType->update($request->all());
 			
 			session()->flash('success', 'Transaction Type Updated Successfully');
@@ -94,6 +96,7 @@ class TransactionTypeController extends Controller
      */
     public function destroy(TransactionType $transactionType)
     {
+			 
 			$transactionType->delete();
 			
 		  session()->flash('success', 'Transaction Type Deleted Successfully');

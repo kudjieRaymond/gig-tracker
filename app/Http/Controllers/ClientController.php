@@ -6,7 +6,6 @@ use App\Client;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreClientRequest;
 use App\Http\Requests\UpdateClientRequest;
-
 class ClientController extends Controller
 {
     /**
@@ -65,7 +64,7 @@ class ClientController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Client $client)
-    {
+    {			 
       return view('clients.edit', compact('client'));
     }
 
@@ -78,6 +77,7 @@ class ClientController extends Controller
      */
     public function update(UpdateClientRequest $request, Client $client)
     {
+			 
 			$client->update($request->all());
 
 				session()->flash('success', 'Client Updated Successfully');
@@ -94,6 +94,7 @@ class ClientController extends Controller
      */
     public function destroy(Client $client)
     {
+			 
 			$client->delete();
 
 			session()->flash('success', 'Client Deleted Successfully');

@@ -32,5 +32,6 @@ Route::group(['middleware'=>['auth']], function(){
 	Route::resource('documents', 'DocumentController');
 	Route::post('documents/media', 'DocumentController@storeMedia')->name('documents.storeMedia');
 	Route::resource('transactions', 'TransactionController');
+  Route::get('reports', 'ReportController@index')->name('reports.index');
 
 });

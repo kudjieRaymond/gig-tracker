@@ -57,6 +57,7 @@ class NoteController extends Controller
      */
     public function show(Note $note)
     {
+	
       $note->load('project');
 
         return view('notes.show', compact( 'note'));
@@ -70,6 +71,7 @@ class NoteController extends Controller
      */
     public function edit(Note $note)
     {
+			 
 			$projects = Project::all()->pluck('name', 'id')->prepend('Please Select', '');
 			
       $note->load('project');
@@ -86,6 +88,7 @@ class NoteController extends Controller
      */
     public function update(UpdateNoteRequest $request, Note $note)
     {
+
 			$note->update($request->all());
 			
 			session()->flash('success', 'Note Updated Successfully');
@@ -101,6 +104,7 @@ class NoteController extends Controller
      */
     public function destroy(Note $note)
     {
+			 
 			$note->delete();
 			
 			session()->flash('success', 'Note Deleted Successfully');

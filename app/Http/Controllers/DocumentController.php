@@ -70,6 +70,7 @@ class DocumentController extends Controller
      */
     public function show(Document $document)
     {
+			 
       $document->load('project');
 
         return view('documents.show', compact('document'));
@@ -83,6 +84,8 @@ class DocumentController extends Controller
      */
     public function edit(Document $document)
     {
+			 abort_if(Gate::denies('perform-action', $client), Response::HTTP_FORBIDDEN, '403 Forbidden');
+			 
         $projects = Project::all()->pluck('name', 'id')->prepend('Please Select', '');
 
         $document->load('project');
@@ -99,6 +102,7 @@ class DocumentController extends Controller
      */
     public function update(UpdateDocumentRequest $request, Document $document)
     {
+
 			 $document->update($request->all());
 			 
 			 if ($request->input('document_file', false)) {

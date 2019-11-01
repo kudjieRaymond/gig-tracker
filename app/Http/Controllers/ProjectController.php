@@ -9,7 +9,6 @@ use App\Http\Requests\UpdateProjectRequest;
 use App\ProjectStatus;
 use App\Client;
 
-
 class ProjectController extends Controller
 {
     /**
@@ -61,6 +60,7 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
+			 
       $project->load('client', 'status');
 
       return view('projects.show', compact('project'));
@@ -74,6 +74,7 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
+
 			$clients = Client::all()->pluck('first_name', 'id')->prepend('Please select', '');
 			
 			$statuses = ProjectStatus::all()->pluck('name', 'id')->prepend('Please select', '');
@@ -92,6 +93,7 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
+			 
 			$project->update($request->all());
 			
 			session()->flash('success', 'Project Updated Successfully');
@@ -107,6 +109,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
+
 			$project->delete();
 			
 			session()->flash('success', 'Project Deleted Successfully');

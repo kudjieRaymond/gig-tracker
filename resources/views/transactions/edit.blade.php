@@ -128,7 +128,7 @@
 									</div>
 									<div class="form-group">
 										<label>Amount</label>	
-										<input type="number" value="{{old('amount',  isset($transaction) ? $transaction->amount : '')}}" class="form-control form-control-lg @error('amount') is-invalid @enderror" name="amount"   title="Enter Amount"  min="0" step="0.01">
+										<input type="number" value="{{old('amount',  isset($transaction) ? $transaction->amount : '')}}" class="form-control form-control-lg @error('amount') is-invalid @enderror" name="amount"   title="Enter Amount"   step="0.01">
 											@error('amount')
 											<span class="invalid-feedback" role="alert">
 													<strong>{{ $message }}</strong>

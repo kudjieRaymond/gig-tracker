@@ -82,7 +82,43 @@
 					<!-- ============================================================== -->
 					<!-- Container fluid  -->
 					<!-- ============================================================== -->
-					@yield('content')
+						<!-- ============================================================== -->
+                <!-- Sales Summery -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <!-- column -->
+                    <div class="col-sm-12 col-lg-4">
+                        <div class="card card-hover">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <div class="m-r-10">
+                                        <span>Projects</span>
+																		<h4>{{$projects->count()}}</h4>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- column -->
+                    <div class="col-sm-12 col-lg-4">
+                        <div class="card card-hover">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="m-r-10">
+                                        <span>Clients</span>
+																		<h4>{{$totalClients}}</h4>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+								</div>
+								
+                <!-- ============================================================== -->
+                <!-- Sales Summery -->
 					<!-- ============================================================== -->
 					<!-- End Container fluid  -->
 					<!-- ============================================================== -->

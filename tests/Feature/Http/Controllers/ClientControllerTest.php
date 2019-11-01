@@ -9,6 +9,7 @@ use App\Client;
 use App\User;
 use App\Http\Requests\StoreClientRequest;
 use App\Http\Controllers\ClientController;
+use Illuminate\Support\Facades\Gate;
 
 class ClientControllerTest extends TestCase
 {
@@ -21,7 +22,8 @@ class ClientControllerTest extends TestCase
 	{
 		parent::setUp() ;
 		
-		$this->user = factory(User::class)->create();
+		$this->user = factory(User::class)->create();		
+		
 	}
 	
     /** @test */
@@ -136,7 +138,9 @@ class ClientControllerTest extends TestCase
 	/** @test */
 	public function delete_a_client()
 	{
-		$client = factory(Client::class)->create();
+		$client = factory(Client::class)->create([
+								'created_by'=> $this->user->id
+							]);
 
 		$response = $this->actingAs($this->user)->delete(route('clients.destroy', $client->id));
 		
