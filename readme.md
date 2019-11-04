@@ -1,7 +1,3 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
-
-
-
 ## About
 
 This is a project to help freelancers to keep track of their Gigs
@@ -20,6 +16,10 @@ Make sure the DB credential in your .env file match the one in the Docker compos
 So in our case
 - replace DB_HOST=127.0.0.1 with the name of your mysql container DB=mysql.  Do same for DB username and password
 - Run   __docker-compose exec php php /var/www/html/artisan migrate__ 
+
+
+<p align="center"><img src="./gig-tracker.png" width="400"></p>
+
 
 ## License
 
